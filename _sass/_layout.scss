@@ -184,7 +184,7 @@
     text-transform: uppercase;
     color: $color-three;
 }
-#section-details h2 {
+#section-details h2, #section-thoughts h2 {
     letter-spacing: 3px;
     font-family: $font-one;
     text-transform: uppercase;
@@ -200,7 +200,6 @@
     font-family: $font-three;
     padding: 15px;
 }
-
 #section-work {
     div.collapsible-header {
         padding: 15px;
@@ -215,8 +214,6 @@
         text-decoration: none;
     }
 }
-
-
 /**
  * Section Selected Work Contact Box
  */
@@ -446,6 +443,8 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background-color: $color-three;
+    max-height: 56px;
 }
 
 .footer-heading {
@@ -515,7 +514,7 @@
             padding-top: 50px;
         }
     }
-    #section-work h2, #section-details h2, #section-contact h2 {
+    #section-work h2, #section-details h2, #section-contact h2, #section-thoughts h2 {
         text-align: center;
     }
 

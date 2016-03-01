@@ -1,18 +1,16 @@
 // Initialize collapse button
-// $(".button-collapse").sideNav();
 $('.button-collapse').sideNav({
-    menuWidth: 150, // Default is 240
-    edge: 'right', // Choose the horizontal origin
-    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    menuWidth: 150, 
+    edge: 'right', 
+    closeOnClick: true 
   }
 );
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-//$('.collapsible').collapsible();
 
+// Initialize textarea
 $('#textarea1').val('New Text');
 $('#textarea1').trigger('autoresize');
 
-
+// Initialize carousel of technology icons
 $(document).ready(function(){
   $('.carousel').carousel();
 });
