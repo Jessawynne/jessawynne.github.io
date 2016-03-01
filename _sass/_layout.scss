@@ -1,17 +1,21 @@
 /**
  * NavBar
  */
+.nav-header {
+    min-height: 56px;
+    position: relative;
+}
 .nav-wrapper {
+    background-color: $color-three;
+}
+.nav-wrapper a {
     background-color: $color-three;
 }
 .brand-logo {
     font-family: $font-one;
-    text-decoration: uppercase;
-    margin: 0 0 0 5%;
+    text-decoration: none;
+    text-transform: uppercase;
     letter-spacing: 3px;
-}
-.nav-wrapper a {
-    background-color: $color-three;
 }
 .button-collapse {
     margin-left: 10px;
@@ -23,159 +27,32 @@
     }
 }
 
+@media (min-width: 992px) {
+    .brand-logo {
+        margin: 0 0 0 5%;
+    }
+    #section-cover {
+        height: 695px;
+    }
+}
 /**
- * Site header
+ * Section Content
  */
-.site-header {
-    min-height: 56px;
-    position: relative;
-}
-.site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: 3px;
-    text-decoration: uppercase;
-    margin-bottom: 0;
-    float: left;
-    font-family: $font-one;
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
-.site-nav {
-    float: right;
-    line-height: 56px;
-    .menu-icon {
-        display: none;
-    }
-    .page-link {
-        color: $color-text;
-        line-height: $base-line-height;
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-            > svg {
-                width: 18px;
-                height: 15px;
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-        .trigger {
-            clear: both;
-            display: none;
-        }
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
-
 .content {
-  z-index: 2;
-  text-align: center;
+    z-index: 2;
+    text-align: center;
 }
 .content div {
-  padding-top: 60px;
-  box-sizing: border-box;
-  text-align: left;
-}
-
-/**
- * Section Cover
- */
-#section-cover {
-    height: 600px;
-    background: url('../img/lt-blue-gray-stripes.png');
+    padding-top: 60px;
     box-sizing: border-box;
-    padding-top: 75px;
-    z-index: 3;
-    div {
-        background: url('../img/blue-img.png');
-        box-shadow: 5px 5px 3px rgb(153,153,153);
-        border-radius: 3px;
-        padding: 5px;
-        width: 160px;
-        margin: 0 auto;
-    }
-    h1 {
-      color: $color-main;
-      font-family: $font-one;
-      font-weight: bolder;
-      text-align: center;
-      letter-spacing: 3px;
-      display: block;
-      padding-bottom: 0;
-      .hi {
-        font-size: 110px;
-      }
-      .there {
-        font-size: 28px;
-      }
-    }
-    h2 {
-      padding: 10px;
-      color: $color-main;
-      font-family: $font-two;
-      font-weight: bolder;
-      text-align: center;
-      text-transform: none;
-      letter-spacing: 0;
-      font-size: 32px;
-      line-height: 75%;
-      margin: 25px auto 0;
-    }
-    h3 {
-      padding: 6px;
-      color: $color-main;
-      font-family: $font-one;
-      font-weight: bolder;
-      text-align: center;
-      letter-spacing: 3px;
-      font-size: 14px;
-      line-height: 75%;
-      margin: 0 10px auto;
-    }
-    p {
-      padding-top: 125px;
-      width: 100%;
-      color: $color-three;
-      box-sizing: border-box;
-      text-align: center;
-    }
+    text-align: left;
 }
-
+#section-work p, #section-details p {
+    font-family: $font-three;
+    padding: 15px;
+}
 /**
- * Section Selected Work
+ * Section Header
  */
 #section-work h2 {
     padding-bottom: 10px;
@@ -196,10 +73,77 @@
     text-transform: uppercase;
     color: $color-three;
 }
-#section-work p, #section-details p {
-    font-family: $font-three;
-    padding: 15px;
+/**
+ * Section Cover
+ */
+#section-cover {
+    background: url('../img/lt-blue-gray-stripes.png');
+    box-sizing: border-box;
+    padding-top: 75px;
+    z-index: 3;
+    .content {
+        height: 515px;
+    }
+    div {
+        background: url('../img/blue-img.png');
+        box-shadow: 5px 5px 3px rgb(153,153,153);
+        border-radius: 3px;
+        padding: 5px;
+        width: 160px;
+        margin: 0 auto;
+    }
+    h1 {
+        color: $color-main;
+        font-family: $font-one;
+        font-weight: bolder;
+        text-align: center;
+        letter-spacing: 3px;
+        display: block;
+        padding-bottom: 0;
+        .hi {
+            font-size: 110px;
+        }
+        .there {
+            font-size: 28px;
+        }
+    }
+    h2 {
+        padding: 10px;
+        color: $color-main;
+        font-family: $font-two;
+        font-weight: bolder;
+        text-align: center;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 32px;
+        line-height: 75%;
+        margin: 25px auto 0;
+    }
+    h3 {
+        padding: 6px;
+        color: $color-main;
+        font-family: $font-one;
+        font-weight: bolder;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: 14px;
+        line-height: 75%;
+        margin: 0 10px auto;
+    }
+    p {
+        padding-top: 125px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        a {
+            padding: 0 10px;
+            color: $color-main;
+        }
+    }
 }
+/**
+ * Section Selected Work
+ */
 #section-work {
     div.collapsible-header {
         padding: 15px;
@@ -225,17 +169,14 @@
     width: 220px;
     height: 220px; 
 }
- 
 .boxy:after,
 .inner-item:before {
     content: '';
     display: table;
 }
- 
 .boxy:after {
     clear: both;
 }
-
 .inner-item {   
     width:100%;
     height:100%;
@@ -250,8 +191,6 @@
         0 1px 2px rgba(0,0,0,0.1);
     -webkit-transition: all 0.4s ease-in-out; 
 }
-
-
 .sub {
     position: absolute;
     background: $color-text;
@@ -263,7 +202,6 @@
     -webkit-transition: all 0.4s ease-in-out;
     -webkit-transform: scale(0);
 }
-
 .inner-item h3 {
     position:relative;
     color: #fff;
@@ -279,7 +217,6 @@
         0 0 1px #fff, 
         0 1px 1px rgba(0,0,0,0.2);
 }
-
 .sub p {
     color: $color-three;
     padding: 10px 5px;
@@ -294,7 +231,6 @@
     opacity: 0;
     -webkit-transition: all 0.4s ease-in-out 0.8s;
 }
-
 .sub p a {
     display: block;
     color: rgba(255,255,255,0.7);
@@ -307,7 +243,6 @@
     font-family: $font-one;
     text-decoration: none;
 }
- 
 .sub p a:hover {
     color: $color-three;
     padding: 5px;
@@ -315,22 +250,18 @@
     border: 2px solid $color-two;
     background-color: $color-text;
 }
-
 .inner-item:hover {
     box-shadow: 
         inset 0 0 0 1px rgba(255,255,255,0.8),
         0 1px 2px rgba(0,0,0,0.1);
 }
-
 .inner-item:hover .sub {
     -webkit-transform: scale(1);
     opacity: 1;
 }
-
 .inner-item:hover .sub p {
     opacity: 1;
 }
-
 /**
  * Section Details
  */
@@ -361,7 +292,9 @@
         height: 230px;
     }
 }
-
+/**
+ * Section Contact
+ */
 #section-contact {
     div.row {
         padding-top: 10px;
@@ -436,7 +369,6 @@
     }
 }
 
-
 /**
  * Site footer
  */
@@ -446,70 +378,15 @@
     background-color: $color-three;
     max-height: 56px;
 }
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
+/**
+ * Section Resize
+ */
 @include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
     .brand-logo {
         margin: 0;
     }
     #section-cover {
-        height: 475px;
+        height: 515px;
         p {
             padding-top: 50px;
         }
@@ -517,7 +394,6 @@
     #section-work h2, #section-details h2, #section-contact h2, #section-thoughts h2 {
         text-align: center;
     }
-
     /**
      * Section Selected Work Contact Box
      */
@@ -563,7 +439,6 @@
         background-color: $color-text;
     }
 }
-
 /**
  * Page content
  */
@@ -594,49 +469,3 @@
     font-size: 24px;
 }
 
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
