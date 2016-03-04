@@ -6,9 +6,12 @@ $('.button-collapse').sideNav({
   }
 );
 
-// Initialize textarea
-$('#textarea1').val('New Text');
-$('#textarea1').trigger('autoresize');
+// Initialize accordion 
+$(document).ready(function(){
+  $('.collapsible').collapsible({
+    accordion : false
+  });
+});
 
 // Initialize carousel of technology icons
 $(document).ready(function(){
