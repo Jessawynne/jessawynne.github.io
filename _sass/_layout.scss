@@ -8,10 +8,12 @@
 .nav-wrapper {
     background-color: $color-three;
 }
-.nav-wrapper a {
+.nav-wrapper ul li a {
     background-color: $color-three;
+    text-decoration: none;
+    
 }
-.brand-logo {
+.nav-wrapper a.brand-logo {
     font-family: $font-one;
     text-decoration: none;
     text-transform: uppercase;
@@ -23,8 +25,18 @@
 #mobile-demo {
     background-color: $color-three;
     a {
-        color: $background-color;
+        color: $background-color;   
     }
+}
+.nav-wrapper a.button-collapse {
+    text-decoration: none;
+}
+.side-nav li {
+    padding: 0;
+    text-align: center;
+}
+.side-nav li:hover {
+    background-color: #23527c;
 }
 
 /**
@@ -137,6 +149,7 @@
  * Section Selected Work
  */
 #section-work {
+    margin: 10px;
     div.collapsible-header {
         padding: 15px;
         background-color: $color-two;
@@ -144,22 +157,32 @@
         color: $color-main;
         font-family: $font-three;
     }
+    div.collapsible-body {
+        padding-top: 0;
+    }
     a {
         font-family: $font-one;
         font-size: 16px;
         text-decoration: none;
+    }
+    img {
+        width: 100%;
     }
 }
 /**
  * Section Selected Work Contact Box
  */
 .boxy {
-    margin: 0 0 0 75%;
+    margin: 0 0 0 25%;
     padding: 0;
     display: block;
     text-align: center;
     width: 220px;
-    height: 220px; 
+    height: 220px;
+    float: left;
+    position: relative;
+    top: -440px;
+    right: -220px;
 }
 .boxy:after,
 .inner-item:before {
@@ -278,6 +301,7 @@
     div.row {
         padding-top: 10px;
         margin-bottom: 0;
+        margin: 5px;
         img {
             padding: 10px;
         }
@@ -395,6 +419,10 @@
      * Section Selected Work Contact Box
      */
     .boxy {
+        float: left;
+        position: relative;
+        top: -240px;
+        right: -10px;
         margin: 0 0 0 45%;
         width: 140px;
         height: 140px; 

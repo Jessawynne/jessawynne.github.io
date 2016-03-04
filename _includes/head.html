@@ -6,14 +6,11 @@
   <META NAME="keywords" CONTENT="nashville web design, freelance web, nashville freelance web, jessawynne parker, jessa parker, developer, programmer, web development, freelance web developer, html5, html5 developer, html5 website design, css3, front end, front-end, front end developer">
   <META NAME="description" CONTENT="Jessawynne is the creative works of developer, Jessawynne Parker, based out of Nashville, TN.">
 
+<!--   <link rel="icon" href="../favicon.ico"> -->
   <title>Jessawynne | Software Developer</title>
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!-- JEKYLL STYLESHEETS -->
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- FONT AWESOME STYLESHEET -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -36,4 +33,9 @@
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,300italic' rel='stylesheet' type='text/css'>
 
+  <!-- JEKYLL STYLESHEETS -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  
 </head>
