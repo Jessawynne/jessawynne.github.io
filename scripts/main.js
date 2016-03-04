@@ -14,3 +14,8 @@ $('#textarea1').trigger('autoresize');
 $(document).ready(function(){
   $('.carousel').carousel();
 });
+
+// Initialize tooltip
+$(document).ready(function(){
+  $('.tooltipped').tooltip({delay: 20});
+});
